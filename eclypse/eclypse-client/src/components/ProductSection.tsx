@@ -45,7 +45,7 @@ const ProductSection = () => {
   const [product, setProduct] = useState<ProductSectionProps | null>()
   
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/api/v4")
+    const res = await axios.get("https://sample-projects-1.onrender.com/api/v4")
     const data = res.data
 
     console.log(data.images)
@@ -80,7 +80,7 @@ const ProductSection = () => {
 
         {/* Image Gallery */}
         <div className="flex flex-wrap justify-center gap-2 items-center">
-          {product.images.map((item, index) => (
+          {img.map((item, index) => (
             <div key={index}>
               <img
                 src={item.src}
