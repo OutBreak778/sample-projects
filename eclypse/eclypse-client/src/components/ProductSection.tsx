@@ -80,7 +80,7 @@ const ProductSection = () => {
 
         {/* Image Gallery */}
         <div className="flex flex-wrap justify-center gap-2 items-center">
-          {img.map((item, index) => (
+          {product.images.map((item, index) => (
             <div key={index}>
               <img
                 src={item.src}
