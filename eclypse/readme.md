@@ -49,3 +49,11 @@ This project focuses on clean UI, responsive layouts, and basic backend integrat
 ```bash
 git clone https://github.com/your-username/eclypse-product-page.git
 cd eclypse-product-page
+```
+***Deployment Link***
+***The full-stack Task Manager project is deployed and accessible online.***
+
+Frontend: https://sample-projects-2.onrender.com
+Backend: https://sample-projects-1.onrender.com/api/v4 (Add /api/v4 at the end to access the API routes)
+
+You can use the frontend link to interact with the app, and the backend link to test the API endpoints directly.
