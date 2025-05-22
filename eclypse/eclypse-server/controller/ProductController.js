@@ -1,5 +1,9 @@
 import { dummyData } from "../data/dummy.js";
 
 export const getProductController = (req, res) => {
-  return res.json(dummyData[0]);
+  const data = dummyData[0]
+  if(!data) {
+    return res.json({"Message": "Something went wrong!", status: 401})
+  }
+  return res.json(data);
 };

@@ -3,6 +3,8 @@ import product1 from "../assets/product-1.jpg";
 import product2 from "../assets/product-2.jpg";
 import product3 from "../assets/product-3.jpg";
 import { Link } from "react-router-dom";
+import axios from "axios"
+import { useEffect, useState } from "react";
 
 const img = [
   {
@@ -22,30 +24,40 @@ const img = [
   },
 ];
 
-const size = [
-  {
-    id: 1,
-    size: "XS",
-  },
-  {
-    id: 2,
-    size: "S",
-  },
-  {
-    id: 3,
-    size: "M",
-  },
-  {
-    id: 4,
-    size: "L",
-  },
-  {
-    id: 5,
-    size: "XL",
-  },
-];
+interface ProductSectionProps {
+  id: string;
+  name: string;
+  description: string;
+  images: string[];
+  price: {
+    amount: string;
+    description: string;
+  };
+  sizeInfo: {
+    text: string;
+    sizes: string[];
+  };
+  video: string
+}
 
 const ProductSection = () => {
+
+  const [product, setProduct] = useState<ProductSectionProps | null>()
+  
+  const getData = async () => {
+    const res = await axios.get("http://localhost:5000/api/v4")
+    const data = res.data
+
+    console.log(data.images)
+    setProduct(data)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  if(!product) return <p>Loading...</p>
+
   return (
     <div className="w-full flex flex-col lg:flex-row mb-10">
       {/* Left Side */}
@@ -62,19 +74,17 @@ const ProductSection = () => {
       <div className="w-full lg:max-w-3xl px-4 md:px-8 lg:px-10 py-4 bg-white text-[#070707]">
         <div className="w-full lg:w-[550px] flex items-center">
           <article className="text-[14px] hidden md:block md:text-[15px] font-medium leading-tight my-6 tracking-normal">
-            A tailored composition in motion. Cut from structured wool with a
-            sculpted shoulder and softened hem, this piece captures presence
-            without force. Worn here in the stillness of a city in motion.
+            {product.description}
           </article>
         </div>
 
         {/* Image Gallery */}
         <div className="flex flex-wrap justify-center gap-2 items-center">
-          {img.map((item) => (
-            <div key={item.id}>
+          {img.map((item, index) => (
+            <div key={index}>
               <img
                 src={item.src}
-                alt={item.label}
+                alt={`${item}-${index}`}
                 className="w-[115px] h-[120px] md:w-[180px] md:h-[170px]  "
               />
             </div>
@@ -85,16 +95,16 @@ const ProductSection = () => {
 
         {/* Price section */}
         <div className="flex flex-row items-center space-x-2">
-          <p className="text-[28px] sm:text-[35px] font-medium">₹7,999</p>
+          <p className="text-[28px] sm:text-[35px] font-medium">₹{product.price.amount}</p>
           <p className="text-gray-600 font-normal text-[14px] sm:text-[15px] mt-2 sm:mt-5">
-            MRP incl. of all taxes
+            {product.price.description}
           </p>
         </div>
 
         {/* Size selection */}
         <div className="flex flex-row items-center space-x-3 mt-6">
           <p className="font-medium text-gray-500 text-[16px] sm:text-[20px]">
-            Please select a size
+            {product.sizeInfo.text}
           </p>
           <p className="font-medium text-gray-500 text-[14px] sm:text-[15px] underline">
             Size chart
@@ -102,11 +112,11 @@ const ProductSection = () => {
         </div>
 
         <div className="flex flex-wrap gap-[10px] mt-4 sm:mt-6">
-          {size.map((item) => (
-            <label key={item.id} className="cursor-pointer">
+          {product.sizeInfo.sizes.map((item, index) => (
+            <label key={index} className="cursor-pointer">
               <input type="checkbox" className="peer hidden" />
               <div className="min-w-[60px] md:min-w-[90px] md:px-4 md:py-2 p-2 bg-[#d9d9d9] rounded-md text-center text-[#767676] font-medium transition-colors peer-checked:bg-black peer-checked:text-white">
-                {item.size}
+                {item}
               </div>
             </label>
           ))}

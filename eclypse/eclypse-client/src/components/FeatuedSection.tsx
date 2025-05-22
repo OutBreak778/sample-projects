@@ -7,7 +7,7 @@ import img4 from "../assets/logo.jpg";
 
 const FeatuedSection = () => {
   return (
-    <div className="mb-10">
+    <div className="mb-10 z-10">
       <div className="md:max-w-3xl max-w-[370px] md:text-[38px] text-[20px] md:mt-48 mt-32 mb-10 -tracking-tight leading-tight">
         Rooted in a philosophy of quiet luxury, our garments are designed to
         speak softly in cut, in movement, in presence.
@@ -19,7 +19,7 @@ const FeatuedSection = () => {
         <ArrowRightIcon className="md:w-6 w-5 md:h-6 h-5 ml-1 -rotate-45" />
       </div>
       {/* Featured product */}
-      <div className="w-full mt-24 md:mt-32">
+      <div className="w-full h-fit mt-24 md:mt-32">
         {/* Top grid */}
         <div className="flex w-full space-x-5 space-y-4">
           <div className="relative md:w-2/3 w-full h-auto ">
@@ -55,11 +55,11 @@ const FeatuedSection = () => {
             <img
               src={img2}
               alt="image"
-              className="md:w-[420px] w-[170px] md:h-[370px] h-[180px] z-10 rounded-[5px] object-cover"
+              className="md:w-[420px] w-[170px] md:h-[370px] h-[180px] rounded-[5px] object-cover absolute"
             />
-            <div className="hidden md:block  inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
+            <div className="hidden md:block absolute inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
 
-            <div className="hidden md:block  px-3 bottom-5  right-4 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
+            <div className="hidden md:block absolute px-3 bottom-5  leading-tight right-4 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
               Discreet side pocked with clean finish Hand made and assembles in
               small batches
             </div>
@@ -68,11 +68,11 @@ const FeatuedSection = () => {
             <img
               src={img3}
               alt="image"
-              className="md:w-[420px] w-[170px] md:h-[370px] h-[180px] z-10 rounded-[5px] object-cover"
+              className="md:w-[420px] w-[170px] md:h-[370px] h-[180px] rounded-[5px] object-cover absolute"
             />
-            <div className="hidden md:block  inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
+            <div className="hidden md:block absolute inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
 
-            <div className="hidden md:block  px-3 bottom-5  right-4 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
+            <div className="hidden md:block absolute px-3 bottom-5  right-4 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 leading-tight">
               Hand made and assembles in small batches
             </div>
           </div>
@@ -82,8 +82,8 @@ const FeatuedSection = () => {
               alt="image"
               className="md:w-[420px] w-[170px] md:h-[370px] h-[180px] group-hover:opacity-0 z-10 rounded-[5px] object-cover"
             />
-            <div className="hidden md:block  inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
-            <div className="hidden md:block  px-3 top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
+            <div className="absolute inset-0 delay-150 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[5px] z-20"></div>
+            <div className="absolute px-3 bottom-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 text-[34.22px] font-normal text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
               <p className="flex items-center justify-center text-6xl">
                 <span>Eclyse </span>
                 <span className="text-3xl">®</span>

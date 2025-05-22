@@ -20,7 +20,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <div
-      className={`py-2 z-50 flex items-center justify-between  px-6 ${
+      className={`py-2 z-100 flex items-center justify-between px-6 ${
         location.pathname === "/cart" ? "border-b-2 border-[#242424]" : ""
       }`}
     >
@@ -28,7 +28,7 @@ const Navbar = () => {
         <img
           src={logo}
           alt="logo"
-          className="md:w-[55px] w-[32px] md:h-[45px] h-[30px] rounded-[5px]"
+          className="md:w-[55px] w-[32px] md:h-[45px] h-[30px] z-100 rounded-[5px]"
         />
       </Link>
       <div className="flex md:space-x-14 space-x-4 items-center font-medium md:text-[18px] text-[12px]">
@@ -38,7 +38,7 @@ const Navbar = () => {
             className={`${
               location.pathname === "/cart" && item.id === 3
                 ? "text-white underline underline-offset-8"
-                : "text-gray-500 "
+                : "text-gray-300 "
             }`}
           >
             {item.label}

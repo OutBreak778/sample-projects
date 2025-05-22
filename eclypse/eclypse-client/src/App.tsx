@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="max-w-[1380px] mx-auto px-4">
-        <div className="z-10 fixed top-0 left-0 w-full backdrop-blur-md bg-black/40 md:px-12">
+        <div className="z-10 fixed top-0 left-0 w-full backdrop-blur-lg bg-black/40 md:px-12">
           <Navbar />
         </div>
         <div className="mt-[107px]">
