@@ -47,7 +47,7 @@ const Login = () => {
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-md">
         <div>
           <h2 className="text-center text-3xl font-extrabold text-gray-900">
-            Welcome to <span className="text-indigo-600">Menu-card</span> 👋
+            Welcome to <span className="text-indigo-600">Arvyax</span> 👋
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Please sign in to your account
@@ -106,7 +106,7 @@ const Login = () => {
         </form>
 
         <div className="text-center text-sm text-gray-500">
-          New to Menu-card?{" "}
+          New to Arvyax?{" "}
           <Link
             to="/register"
             className="font-medium text-indigo-600 hover:underline"
