@@ -44,3 +44,7 @@ http://localhost:3000
 3. The backend sends the prompt to Gemini LLM.
 4. Gemini responds with an AI-generated answer.
 5. The response is shown on the screen.
+
+## 📸 Screenshot
+
+![App Screenshot](./public/screenshot 2025-08-02 232055.png)
