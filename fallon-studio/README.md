@@ -1,3 +1,5 @@
+<img width="1917" height="973" alt="Screenshot 2025-08-02 232055" src="https://github.com/user-attachments/assets/a0459d68-c664-4e77-9414-dbd3ebfa4ed7" />
+
 # 🧠 AI Feedback Assistant
 
 A simple web app built using **Next.js** that lets users ask any question and receive real-time responses from Google's **Gemini LLM** as i have used the Google gemini for the feedbacks
@@ -47,4 +49,4 @@ http://localhost:3000
 
 ## 📸 Screenshot
 
-![App Screenshot](./public/screenshot 2025-08-02 232055.png)
+![App Screenshot](/public/Screenshot 2025-08-02 232055.png)
