@@ -30,13 +30,20 @@ A simple web app built using **Next.js** that lets users ask any question and re
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/ai-feedback-assistant.git
-cd ai-feedback-assistant
+git clone https://github.com/your-username/fallon-studio.git
+cd fallon-studio
 ```
 
+# To install the packages 
 npm install
+
+# Add your own API key here
 GEMINI_API_KEY=your_google_api_key_here
+
+# To run the setup locally
 npm run dev
+
+
 App will be live at:
 http://localhost:3000
 
@@ -46,7 +53,4 @@ http://localhost:3000
 3. The backend sends the prompt to Gemini LLM.
 4. Gemini responds with an AI-generated answer.
 5. The response is shown on the screen.
-
-## 📸 Screenshot
-
-![App Screenshot](/public/Screenshot 2025-08-02 232055.png)
+ 
